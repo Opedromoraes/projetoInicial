@@ -1,6 +1,7 @@
 package aula_6;
 
 import aula_6.model.Cachorro;
+import aula_6.model.Gato;
 import aula_6.service.AnimalService;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class Aula6 {
     public static void main(String[] args) {
-        
+
         Cachorro cachorro = new Cachorro(3, 30.5);
         Cachorro cachorro1 = new Cachorro(1, 10.25);
         Cachorro cachorro2 = new Cachorro(30, 100.1);
@@ -26,11 +27,48 @@ public class Aula6 {
         cachorros = animalService.cadastrarCachorro(cachorros, cachorro1);
         cachorros = animalService.cadastrarCachorro(cachorros, cachorro2);
 
-        animalService.deletarCachorros(cachorros,2);
+        animalService.deletarCachorros(cachorros, 2);
         animalService.buscarCachorro(cachorros, "pincher");
-        Cachorro cachorroNovo = new Cachorro(7,50.2);
+        Cachorro cachorroNovo = new Cachorro(7, 50.2);
         cachorroNovo.setRaca("pastor alemão");
         cachorroNovo.setAlturaLatido(60.47);
-        animalService.atualizarCachorro(cachorros,"poodle",cachorroNovo);
+        animalService.atualizarCachorro(cachorros, "poodle", cachorroNovo);
+
+        Gato gato = new Gato(3, 10.1, 2, 25);
+        Gato gato1 = new Gato(5, 10.8, 1, 10);
+        Gato gato2 = new Gato(1, 10.9, 5, 50);
+
+        List<Gato> gatos = new ArrayList<>();
+        gatos = animalService.cadastrarGato(gatos, gato);
+        gatos = animalService.cadastrarGato(gatos, gato1);
+        gatos = animalService.cadastrarGato(gatos, gato2);
+
+        animalService.deletarGato(gatos, 5);
+        animalService.buscarGato(gatos, 5);
+
+        Gato gatoNovo = new Gato(100, 90.598, 80, 5);
+        gatos = animalService.atualizarGato(gatos, 10.9, gatoNovo);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
