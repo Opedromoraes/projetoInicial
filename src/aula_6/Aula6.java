@@ -13,7 +13,7 @@ public class Aula6 {
         Cachorro cachorro = new Cachorro(3, 30.5);
         Cachorro cachorro1 = new Cachorro(1, 10.25);
         Cachorro cachorro2 = new Cachorro(30, 100.1);
-        cachorro.setRaca("poodle");
+        cachorro.setRaca("labrador");
         cachorro.setAlturaLatido(20.58);
         cachorro1.setRaca("pincher");
         cachorro1.setAlturaLatido(80.58);
