@@ -83,6 +83,17 @@ public class AnimalService {
                                 "ele pesa %d kg e possui %.1f metros",
                         gatoNovo.getTamanhoDaCalda(), gatoNovo.getAlturaMiado(),
                         gatoNovo.getPeso(), gatoNovo.getAltura());
+                System.out.println();
+            }
+        });
+        return gatos;
+    }
+
+    public List<Gato> adotarGatoViraLata(List<Gato> gatos) {
+        gatos.forEach(gato -> {
+            if (gato.isViraLata()) {
+                System.out.printf("Adotando o gato que tem o peso %d...\n", gato.getPeso());
+                gato.setViraLata(false);
             }
         });
         return gatos;

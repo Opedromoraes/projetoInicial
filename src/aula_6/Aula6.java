@@ -34,9 +34,9 @@ public class Aula6 {
         cachorroNovo.setAlturaLatido(60.47);
         animalService.atualizarCachorro(cachorros, "poodle", cachorroNovo);
 
-        Gato gato = new Gato(3, 10.1, 2, 25);
-        Gato gato1 = new Gato(5, 10.8, 1, 10);
-        Gato gato2 = new Gato(1, 10.9, 5, 50);
+        Gato gato = new Gato(3, 10.1, false, 2, 25);
+        Gato gato1 = new Gato(5, 10.8, false, 1, 10);
+        Gato gato2 = new Gato(1, 10.9, false, 5, 50);
 
         List<Gato> gatos = new ArrayList<>();
         gatos = animalService.cadastrarGato(gatos, gato);
@@ -46,8 +46,18 @@ public class Aula6 {
         animalService.deletarGato(gatos, 5);
         animalService.buscarGato(gatos, 5);
 
-        Gato gatoNovo = new Gato(100, 90.598, 80, 5);
+        Gato gatoNovo = new Gato(100, 90.598, false, 80, 5);
         gatos = animalService.atualizarGato(gatos, 10.9, gatoNovo);
+
+        Gato gato3 = new Gato(6, 11.9, true, 5, 50);
+        Gato gato4 = new Gato(7, 13.9, false, 10, 500);
+        Gato gato5 = new Gato(8, 15.9, true, 15, 50000);
+        gatos = animalService.cadastrarGato(gatos, gato3);
+        gatos = animalService.cadastrarGato(gatos, gato4);
+        gatos = animalService.cadastrarGato(gatos, gato5);
+
+        gatos = animalService.adotarGatoViraLata(gatos);
+
     }
 }
 

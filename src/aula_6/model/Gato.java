@@ -1,13 +1,16 @@
 package aula_6.model;
 
-public class Gato extends Animal{
+public class Gato extends Animal {
     private int tamanhoDaCalda;
     private double alturaMiado;
+    private boolean viraLata;
 
-    public Gato(int tamanhoDaCalda, double alturaMiado,int peso,double altura) {
+
+    public Gato(int tamanhoDaCalda, double alturaMiado, boolean viraLata, int peso, double altura) {
         super(peso, altura);
         this.tamanhoDaCalda = tamanhoDaCalda;
         this.alturaMiado = alturaMiado;
+        this.viraLata = viraLata;
     }
 
     public int getTamanhoDaCalda() {
@@ -24,5 +27,13 @@ public class Gato extends Animal{
 
     public void setAlturaMiado(double alturaMiado) {
         this.alturaMiado = alturaMiado;
+    }
+
+    public boolean isViraLata() {
+        return viraLata;
+    }
+
+    public void setViraLata(boolean viraLata) {
+        this.viraLata = viraLata;
     }
 }
