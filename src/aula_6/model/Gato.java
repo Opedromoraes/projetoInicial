@@ -12,7 +12,9 @@ public class Gato extends Animal {
         this.alturaMiado = alturaMiado;
         this.viraLata = viraLata;
     }
-
+    public Gato(){
+        super();
+    }
     public int getTamanhoDaCalda() {
         return tamanhoDaCalda;
     }

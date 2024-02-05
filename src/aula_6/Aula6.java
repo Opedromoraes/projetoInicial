@@ -1,8 +1,10 @@
 package aula_6;
 
 import aula_6.model.Cachorro;
+import aula_6.model.Fazenda;
 import aula_6.model.Gato;
 import aula_6.service.AnimalService;
+import aula_6.service.FazendaService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +60,12 @@ public class Aula6 {
 
         gatos = animalService.adotarGatoViraLata(gatos);
 
+        Fazenda fazenda = new Fazenda();
+        FazendaService fazendaService = new FazendaService();
+        fazendaService.adicionarCachorro(fazenda,cachorros);
+        fazendaService.buscarCachorros(fazenda);
+        fazendaService.adicionarGatos(fazenda,gatos);
+        fazendaService.buscarGato(fazenda,1);
     }
 }
 

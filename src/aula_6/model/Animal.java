@@ -9,6 +9,10 @@ public class Animal {
         this.altura = altura;
     }
 
+    public Animal() {
+
+    }
+
     public int getPeso() {
         return peso;
     }
