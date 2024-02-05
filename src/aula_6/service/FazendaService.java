@@ -18,38 +18,15 @@ public class FazendaService {
             System.out.println();
         });
     }
-    public void adicionarGatos (Fazenda fazenda, List<Gato> gatos){
+
+    public void adicionarGatos(Fazenda fazenda, List<Gato> gatos) {
         fazenda.setGatos(gatos);
     }
 
-    public void buscarGato (Fazenda fazenda,int indice){
+    public void buscarGato(Fazenda fazenda, int indice) {
         Gato gato = fazenda.getGatos().get(indice);
-        System.out.printf("O gato escolhido foi o que tem a calda de %d cm",gato.getTamanhoDaCalda());
+        System.out.printf("O gato escolhido foi o que tem a calda de %d cm", gato.getTamanhoDaCalda());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

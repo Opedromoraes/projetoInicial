@@ -62,10 +62,10 @@ public class Aula6 {
 
         Fazenda fazenda = new Fazenda();
         FazendaService fazendaService = new FazendaService();
-        fazendaService.adicionarCachorro(fazenda,cachorros);
+        fazendaService.adicionarCachorro(fazenda, cachorros);
         fazendaService.buscarCachorros(fazenda);
-        fazendaService.adicionarGatos(fazenda,gatos);
-        fazendaService.buscarGato(fazenda,1);
+        fazendaService.adicionarGatos(fazenda, gatos);
+        fazendaService.buscarGato(fazenda, 1);
     }
 }
 
